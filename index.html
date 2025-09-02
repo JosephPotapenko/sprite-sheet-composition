@@ -116,14 +116,23 @@
 
     fileInput.addEventListener('change', (event) => {
       const files = Array.from(event.target.files);
-      files.forEach(file => {
+      // Sort files by name before loading
+      files.sort((a, b) => a.name.localeCompare(b.name));
+      let loadedImages = [];
+      let loadedCount = 0;
+
+      files.forEach((file, idx) => {
         const reader = new FileReader();
         reader.onload = e => {
           const img = new Image();
           img.src = e.target.result;
           img.onload = () => {
-            images.push(img);
-            renderPreview();
+            loadedImages[idx] = img;
+            loadedCount++;
+            if (loadedCount === files.length) {
+              images = images.concat(loadedImages.filter(Boolean));
+              renderPreview();
+            }
           }
         }
         reader.readAsDataURL(file);
