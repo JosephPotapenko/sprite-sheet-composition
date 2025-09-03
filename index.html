@@ -9,7 +9,44 @@
       font-family: Arial, sans-serif;
       margin: 20px;
       background: #f9f9f9;
-      color: #333;
+      color: #1f1f28;
+      transition: background 0.2s, color 0.2s;
+    }
+    /* Dark mode styles */
+    body.dark-mode {
+      background: #171a23;
+      color: #eee;
+    }
+    body.dark-mode h1 {
+      color: #fff;
+    }
+    body.dark-mode .thumb {
+      background: #212231;
+      border-color: #242736;
+    }
+    body.dark-mode .delete-btn {
+      background: #b71c1c;
+      color: #fff;
+    }
+    body.dark-mode .delete-btn:hover {
+      background: #d62828;
+    }
+    body.dark-mode canvas {
+      border-color: #eee;
+      background: #292b33;
+    }
+    body.dark-mode button {
+      background: #29292e;
+      color: #eee;
+    }
+    body.dark-mode button:hover {
+      background: hsl(240, 7%, 27%);
+    }
+    body.dark-mode input[type=file], 
+    body.dark-mode input[type=number] {
+      background: #262529;
+      color: #eee;
+      border: 1px solid #414350;
     }
     h1 {
       text-align: center;
@@ -97,6 +134,7 @@
     <label>Columns: <input type="number" id="columnsInput" value="1" min="1" style="width:60px"></label>
     <button id="combineBtn">Combine</button>
     <button id="downloadBtn">Download</button>
+    <button id="darkModeBtn" style="background:#242950;color:#eee;">🌙 Dark Mode</button>
   </div>
 
   <div id="preview"></div>
@@ -219,6 +257,27 @@
       link.download = 'sprite_sheet.png';
       link.href = canvas.toDataURL();
       link.click();
+    });
+
+    const darkModeBtn = document.getElementById('darkModeBtn');
+
+    // Automatically enable dark mode on page load
+    document.body.classList.add('dark-mode');
+    darkModeBtn.textContent = '☀️ Light Mode';
+    darkModeBtn.style.background = '#eee';
+    darkModeBtn.style.color = '#222';
+
+    darkModeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        darkModeBtn.textContent = '☀️ Light Mode';
+        darkModeBtn.style.background = '#eee';
+        darkModeBtn.style.color = '#222';
+      } else {
+        darkModeBtn.textContent = '🌙 Dark Mode';
+        darkModeBtn.style.background = '#222';
+        darkModeBtn.style.color = '#eee';
+      }
     });
   </script>
 </body>
