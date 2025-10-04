@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprite Sheet Maker - README</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .readme-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .readme-content {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-top: 60px;
+    }
+    body.dark-mode .readme-content {
+      background: linear-gradient(135deg, #1e2a3a, #2a3647);
+      color: #c7e3ff;
+      box-shadow: 0 0 15px rgba(58, 79, 102, 0.2);
+    }
+    .readme-content h1 {
+      color: #2196F3;
+      border-bottom: 2px solid #2196F3;
+      padding-bottom: 10px;
+    }
+    body.dark-mode .readme-content h1 {
+      color: #5ca8ff;
+      border-bottom-color: #5ca8ff;
+    }
+    .readme-content h2 {
+      color: #1976D2;
+      margin-top: 30px;
+    }
+    body.dark-mode .readme-content h2 {
+      color: #9ecafb;
+    }
+    .readme-content h3 {
+      color: #333;
+      margin-top: 25px;
+    }
+    body.dark-mode .readme-content h3 {
+      color: #c7e3ff;
+    }
+    .readme-content code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    body.dark-mode .readme-content code {
+      background: #0a0f1a;
+      color: #9ecafb;
+    }
+    .readme-content pre {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      border-left: 4px solid #2196F3;
+    }
+    body.dark-mode .readme-content pre {
+      background: #0a0f1a;
+      border-left-color: #5ca8ff;
+    }
+    .readme-content ul, .readme-content ol {
+      padding-left: 25px;
+    }
+    .readme-content li {
+      margin-bottom: 8px;
+    }
+    #backBtn {
+      background: #4CAF50 !important;
+    }
+    #backBtn:hover {
+      background: #45a049 !important;
+    }
+    body.dark-mode #backBtn {
+      background: linear-gradient(135deg, #2a4766, #3a5f85) !important;
+    }
+    body.dark-mode #backBtn:hover {
+      background: linear-gradient(135deg, #3a5f85, #4a7aa3) !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="navigation">
+    <button id="backBtn" onclick="window.location.href='index.html'">⬅️ Back to Program</button>
+  </div>
+
+  <div class="readme-container">
+    <div class="readme-content">
+      <h1>Sprite Sheet Maker</h1>
+
+      <p>A powerful web-based tool for creating sprite sheets from individual images and recording animated sprite sequences. Perfect for game developers, pixel artists, and anyone working with sprite-based animations.</p>
+
+      <p><em>This tool was developed with the assistance of AI tools to enhance development speed and code quality.</em></p>
+
+      <h2>Features</h2>
+
+      <h3>Core Sprite Sheet Creation</h3>
+      <ul>
+        <li><strong>Multi-Image Upload</strong>: Load multiple images simultaneously with automatic alphabetical sorting</li>
+        <li><strong>Drag & Drop Reordering</strong>: Easily rearrange sprites by dragging thumbnails to desired positions</li>
+        <li><strong>Configurable Grid Layout</strong>: Set custom column counts to control sprite sheet dimensions</li>
+        <li><strong>Individual Sprite Deletion</strong>: Remove unwanted sprites with convenient delete buttons</li>
+        <li><strong>Pixel-Perfect Rendering</strong>: Maintains crisp pixel art quality with disabled image smoothing</li>
+        <li><strong>Automatic Centering</strong>: Sprites are automatically centered within their grid cells</li>
+        <li><strong>PNG Export</strong>: Download high-quality sprite sheets as PNG files</li>
+      </ul>
+
+      <h3>Advanced Sprite Navigator & Recorder</h3>
+      <ul>
+        <li><strong>Individual Sprite Navigation</strong>: Browse through uploaded sprites one by one using arrow buttons or keyboard shortcuts (←/→)</li>
+        <li><strong>Visual Sprite Selector</strong>: Click on thumbnail previews to quickly jump to specific sprites</li>
+        <li><strong>High-Quality Video Recording</strong>: Record sprite animations in WebM format with up to 16 Mbps bitrate</li>
+        <li><strong>Multiple Aspect Ratios</strong>: Support for various aspect ratios (1:1, 4:3, 16:9, 9:16, 3:2, 2:3, 5:4, 4:5, 21:9)</li>
+        <li><strong>1080p Recording Quality</strong>: Internal recording resolution targets 1080p for crisp video output</li>
+        <li><strong>Smart Sprite Positioning</strong>: Automatic bottom-alignment based on sprite content analysis</li>
+        <li><strong>Zoom Control</strong>: Adjustable zoom levels (10-100%) for optimal sprite framing</li>
+      </ul>
+
+      <h3>Background Customization</h3>
+      <ul>
+        <li><strong>Color Backgrounds</strong>: Choose any solid color background using the color picker</li>
+        <li><strong>Image Backgrounds</strong>: Upload custom background images that automatically crop to fit aspect ratio</li>
+        <li><strong>Transparent Backgrounds</strong>: Support for transparent backgrounds in sprite sheets</li>
+      </ul>
+
+      <h3>Recording Controls</h3>
+      <ul>
+        <li><strong>Real-Time Recording</strong>: Start/stop controlled recording with visual feedback</li>
+        <li><strong>Recording Timer</strong>: Live display of recording duration</li>
+        <li><strong>Frame Capture</strong>: Save individual frames as PNG images during recording (click canvas or press 'S')</li>
+        <li><strong>Keyboard Shortcuts</strong>:
+          <ul>
+            <li>Space bar: Start/stop recording</li>
+            <li>S: Save current frame as image</li>
+            <li>Left/Right arrows: Navigate between sprites</li>
+          </ul>
+        </li>
+        <li><strong>Video Management</strong>: Download recorded videos or remove them to start fresh</li>
+      </ul>
+
+      <h3>User Interface</h3>
+      <ul>
+        <li><strong>Dark/Light Mode Toggle</strong>: Automatic dark mode on load with toggle option</li>
+        <li><strong>Responsive Design</strong>: Adapts to different screen sizes and devices</li>
+        <li><strong>Intuitive Controls</strong>: Clean, organized interface with clearly labeled functions</li>
+        <li><strong>Real-Time Preview</strong>: Instant preview of sprite sheet as you make changes</li>
+      </ul>
+
+      <h2>How to Use</h2>
+
+      <h3>Creating a Sprite Sheet</h3>
+      <ol>
+        <li>Click "Choose Files" and select multiple image files</li>
+        <li>Images will appear as draggable thumbnails in the preview area</li>
+        <li>Drag thumbnails to reorder sprites as needed</li>
+        <li>Set the desired number of columns using the "Columns" input</li>
+        <li>Click "Combine" to generate the sprite sheet</li>
+        <li>Click "Download" to save the sprite sheet as a PNG file</li>
+      </ol>
+
+      <h3>Recording Sprite Animations</h3>
+      <ol>
+        <li>Upload your sprite images using the file input</li>
+        <li>Navigate to the "Sprite Navigator & Recorder" section</li>
+        <li>Choose your preferred aspect ratio from the dropdown menu</li>
+        <li>Set the zoom level (40% is default for good framing)</li>
+        <li>Select background color or upload a background image</li>
+        <li>Use navigation buttons or thumbnail selector to choose your starting sprite</li>
+        <li>Click "🎬 Start Controlled Recording" to begin recording</li>
+        <li>Navigate between sprites during recording using:
+          <ul>
+            <li>Arrow buttons</li>
+            <li>Thumbnail selector</li>
+            <li>Left/Right keyboard arrows</li>
+          </ul>
+        </li>
+        <li>Press 'S' or click the preview canvas to save individual frames</li>
+        <li>Click "⏹️ Stop Recording" when finished</li>
+        <li>Download your recorded video using the "⬇️ Download Video" button</li>
+      </ol>
+
+      <h3>Keyboard Shortcuts</h3>
+      <ul>
+        <li><strong>Space</strong>: Start/stop recording</li>
+        <li><strong>S</strong>: Save current frame as PNG (during recording)</li>
+        <li><strong>Left Arrow</strong>: Previous sprite</li>
+        <li><strong>Right Arrow</strong>: Next sprite</li>
+      </ul>
+
+      <h2>Technical Features</h2>
+      <ul>
+        <li><strong>Pixel Art Optimization</strong>: Disabled image smoothing for crisp pixel art rendering</li>
+        <li><strong>High Bitrate Recording</strong>: 16 Mbps video encoding for maximum quality</li>
+        <li><strong>Smart Background Detection</strong>: Automatic sprite boundary detection for optimal positioning</li>
+        <li><strong>Performance Optimization</strong>: Cached sprite analysis for smooth playback</li>
+        <li><strong>Browser Compatibility</strong>: Works in modern browsers with MediaRecorder API support</li>
+      </ul>
+
+      <h2>File Structure</h2>
+      <pre><code>sprite-sheet-composition/
+├── index.html          # Main HTML structure
+├── style.css           # All CSS styles and theming
+├── script.js           # Complete JavaScript functionality
+├── README.md          # This documentation
+└── favicons/          # App icons and favicons</code></pre>
+
+      <h2>Browser Support</h2>
+      <ul>
+        <li>Chrome/Chromium (recommended)</li>
+        <li>Firefox</li>
+        <li>Safari (limited video format support)</li>
+        <li>Edge</li>
+      </ul>
+
+      <p><em>Note: Video recording requires browsers with MediaRecorder API support. WebM format is preferred for best quality.</em></p>
+
+      <h2>Getting Started</h2>
+      <ol>
+        <li>Clone or download this repository</li>
+        <li>Open <code>index.html</code> in your web browser</li>
+        <li>Start uploading images and creating sprite sheets!</li>
+      </ol>
+
+      <p>No installation or build process required - it's a pure client-side web application.</p>
+
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Game development sprite sheet creation</li>
+        <li>Pixel art animation sequences</li>
+        <li>Character animation recording</li>
+        <li>UI element organization</li>
+        <li>Animation frame extraction</li>
+        <li>Social media content creation</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Apply dark mode if it was enabled in the main app
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+</body>
+</html>

@@ -1,3 +1,196 @@
-body{
-    background: peachpuff;
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+  color: #333;
+  transition: background 0.2s, color 0.2s;
 }
+
+/* Navigation styles */
+#navigation {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+#readmeBtn {
+  padding: 8px 12px;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#readmeBtn:hover {
+  background: #1976D2;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+body.dark-mode #readmeBtn {
+  background: linear-gradient(135deg, #2a4766, #3a5f85);
+  border: 1px solid #4a7aa3;
+  box-shadow: 0 0 3px rgba(74, 122, 163, 0.08);
+}
+
+body.dark-mode #readmeBtn:hover {
+  background: linear-gradient(135deg, #3a5f85, #4a7aa3);
+  box-shadow: 0 0 8px rgba(74, 158, 255, 0.2);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background: linear-gradient(135deg, #0a0f1a, #151f2e, #0f1425);
+  color: #c7e3ff;
+}
+
+body.dark-mode h1 {
+  color: #cbe2fc;
+  text-shadow: 0 0 8px rgba(168, 208, 255, 0.2);
+}
+
+body.dark-mode .thumb {
+  background: linear-gradient(135deg, #1e2a3a, #2a3647);
+  border-color: #3a4f66;
+  box-shadow: 0 0 4px rgba(58, 79, 102, 0.15);
+}
+
+body.dark-mode .delete-btn {
+  background: #b71c1c;
+  color: #fff;
+}
+
+body.dark-mode .delete-btn:hover {
+  background: #d62828;
+}
+
+body.dark-mode canvas {
+  border-color: #5ca8ff;
+  background: linear-gradient(135deg, #1a2332, #2a3545);
+  box-shadow: 0 0 6px rgba(74, 158, 255, 0.12);
+}
+
+body.dark-mode button {
+  background: linear-gradient(135deg, #2a4766, #3a5f85);
+  color: #c7e3ff;
+  border: 1px solid #4a7aa3;
+  box-shadow: 0 0 3px rgba(74, 122, 163, 0.08);
+}
+
+body.dark-mode button:hover {
+  background: linear-gradient(135deg, #3a5f85, #4a7aa3);
+  box-shadow: 0 0 8px rgba(74, 158, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+body.dark-mode input[type=file], 
+body.dark-mode input[type=number] {
+  background: linear-gradient(135deg, #1e2a3a, #2a3647);
+  color: #c7e3ff;
+  border: 1px solid #4a7aa3;
+  box-shadow: 0 0 2px rgba(74, 122, 163, 0.06);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+input[type=file], input[type=number] {
+  padding: 6px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4CAF50;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.thumb {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 5px;
+  background: white;
+  cursor: grab;
+  transition: all 0.3s ease;
+}
+
+.thumb img {
+  display: block;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  background: #d62828;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  border: 2px solid #333;
+  background: transparent;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Subtle hover effects */
+.thumb:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
